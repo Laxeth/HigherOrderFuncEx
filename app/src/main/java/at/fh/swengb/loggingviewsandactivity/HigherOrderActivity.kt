@@ -16,7 +16,7 @@ class HigherOrderActivity : AppCompatActivity() {
         myHigherOrderFunction { param:Int -> param * 102 }
         myHigherOrderFunction { 6 * 102 }
 
-        kotlinHigherOrderWithList()
+        //kotlinHigherOrderWithList()
     }
 
     private fun myHigherOrderFunction(param: (Int) -> Int) {
@@ -25,6 +25,7 @@ class HigherOrderActivity : AppCompatActivity() {
         }
     }
 
+    /*
     private fun kotlinHigherOrderWithList() {
         val list = LessonRepository.lessonsList()
 
@@ -50,4 +51,6 @@ class HigherOrderActivity : AppCompatActivity() {
         Log.e("avgLecture",avgLecture.toString())
 
     }
+
+     */
 }
