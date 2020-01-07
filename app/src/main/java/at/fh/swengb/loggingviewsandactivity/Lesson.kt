@@ -10,7 +10,8 @@ class Lesson (
     val topic: String,
     val type: LessonType,
     val lecturers: List<Lecturer>,
-    val ratings: MutableList<LessonRating>)
+    val ratings: MutableList<LessonRating>,
+    val imageUrl: String)
 
 { fun ratingAvarage(): Double {
 
@@ -25,7 +26,7 @@ class Lesson (
   }
 
     override fun toString(): String {
-        return "Lesson(id='$id', name='$name', date='$date', topic='$topic', type=$type, lecturers=$lecturers, ratings=$ratings)"
+        return "Lesson(id='$id', name='$name', date='$date', topic='$topic', type=$type, lecturers=$lecturers, ratings=$ratings, imageUrl=$imageUrl)"
     }
 
 }

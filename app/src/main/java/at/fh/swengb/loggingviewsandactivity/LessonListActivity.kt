@@ -58,6 +58,17 @@ class LessonListActivity : AppCompatActivity() {
                 //lessonAdapter.updateList(LessonRepository.lessonsList())
             }
         }
+
+        LessonRepository.lessonsList(
+            success = {
+                // handle success
+                lessonAdapter.updateList(it)
+            },
+            error = {
+                // handle error
+                Log.e("lessonsList FAILED", "IT FAILED DAMNIT")
+            }
+        )
     }
 
     fun parseJson(){
@@ -79,7 +90,8 @@ class LessonListActivity : AppCompatActivity() {
                         "name": "Sanja Illes"
                     }
                 ],
-                "ratings": []
+                "ratings": [],
+                "imageUrl": ""
             }
         """
 
